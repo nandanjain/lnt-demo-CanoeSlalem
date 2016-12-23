@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:focusable="true"
+    android:keepScreenOn="true"
+    tools:context="lnt.cisco.ibc.com.webview.PlayerActivity"
+    android:id="@+id/root"
+    >
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/player_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true" />
+
+</FrameLayout>

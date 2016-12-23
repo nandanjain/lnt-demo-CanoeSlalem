@@ -1,0 +1,443 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(fonts/Roboto-Light.ttf)
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(fonts/Roboto-Medium.ttf);
+    font-weight: 700
+}
+
+body {
+    height: 1080px;
+    width: 1920px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    z-index: -999;
+    padding: 0
+}
+
+.displayNone {
+    display: none !important
+}
+
+.show {
+    visibility: visible !important
+}
+
+.fullview {
+    position: relative
+}
+
+#main_container, .fullview, .fullview > div, .fullview > div > ul {
+    height: 1080px;
+    width: 1920px;
+    margin: 10px 0
+}
+
+#swimlane_view {
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+    overflow: hidden;
+    height: 1020px;
+    top: 380px;
+    z-index: 9
+}
+
+#video_view, #swimlane_container {
+    position: absolute;
+    overflow: hidden
+}
+
+#video_view {
+    top: 0;
+    padding: 0;
+    background: #fff;
+    margin: 0;
+    font-size: 40px;
+    color: #000;
+    text-align: center;
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+#swimlane {
+    -webkit-transition: -webkit-transform 700ms;
+    -webkit-transition-function: cubic-bezier(.35, .99, .35, .99)
+}
+
+li {
+    height: 550px;
+    width: 1845px;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-right: 40px
+}
+
+li > div {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    width: 1845px;
+    height: 550px;
+    white-space: nowrap;
+    -webkit-transition: -webkit-transform 700ms;
+    -webkit-transition-function: cubic-bezier(.35, .99, .35, .99);
+    padding-left: 15px
+}
+
+.posterCard {
+    position: relative;
+    color: #fff;
+    display: inline-block;
+    background-clip: border-box;
+    background-size: contain;
+    -webkit-transition: -webkit-transform 700ms;
+    -webkit-transition-function: cubic-bezier(.35, .99, .35, .99);
+    z-index: 45;
+    top: 45px;
+    left: 54px;
+    width: 320px;
+    height: 268px;
+    background: url(assets/thumbnail_image.png) no-repeat;
+    padding: 0;
+    margin: 0;
+    padding-right: 34px;
+    padding-left: 34px
+}
+
+.focus {
+    width: 345px;
+    -webkit-transform: scale(1.2, 1.2);
+    padding-right: 34px;
+    padding-left: 34px
+}
+
+.focus > img.event_item {
+    left: 3px
+}
+
+.event_item {
+    position: relative;
+    top: 35px;
+    background: no-repeat;
+    background-size: cover;
+    height: 195px;
+    width: 315px;
+    border-radius: 15px
+}
+
+.event_item_text {
+    position: absolute;
+    top: 62px;
+    left: 0px;
+    font-size: 50px;
+    margin-left: 38px;
+    width: 278px;
+    height: 110px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    box-sizing: content-box;
+    display: block;
+    overflow: hidden;
+    white-space: normal;
+    background: black;
+}
+
+.title {
+    white-space: pre-wrap;
+    font-size: 20pt;
+    font-weight: 700;
+    padding: 5px 0;
+    text-align: center;
+    height: auto
+}
+
+.category_title > img {
+    display: none
+}
+
+.category_title {
+    position: absolute;
+    width: 480px;
+    height: 350px;
+    font-size: 35px;
+    top: -13px;
+    left: 3px;
+    background: url(assets/selected_thumbnail_image.png) no-repeat
+}
+
+img.playHead {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    height: 100px;
+    opacity: 0
+}
+
+.focus img.playHead {
+    opacity: 1;
+    -webkit-transition: opacity 900ms;
+    -webkit-transition-delay: 1s
+}
+
+#swim_header {
+    position: relative;
+    height: 90px;
+    margin-top: 0
+}
+
+div#version {
+    position: absolute;
+    top: 1040px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    font-size: 25px;
+    display: inline-block;
+    font-weight: bold;
+    z-index: 99;
+}
+
+#swim_date {
+    position: relative;
+    right: 50px;
+    float: right;
+    top: 10px;
+    height: 80px;
+    width: 225px;
+    margin: 0;
+    display: inline-block
+}
+
+#swim_date .time {
+    position: absolute;
+    font-size: 53px;
+    left: 35px;
+    display: inherit;
+    height: 80px;
+    clear: both
+}
+
+#swim_date .day {
+    height: 25px;
+    font-size: 30px;
+    display: block;
+    float: right;
+    clear: both;
+    margin: 0;
+    padding-top: 2px
+}
+
+#swim_date .ampm {
+    font-size: 33px;
+    display: block;
+    float: right;
+    clear: both;
+    margin: 0;
+    padding: 0
+}
+
+#header_title {
+    position: absolute;
+    padding-top: 11px;
+    text-align: left;
+    padding-left: 50px;
+    font-weight: 700;
+    font-size: 60px;
+    display: inline-block
+}
+
+.leftArrow, .rightArrow {
+    position: absolute;
+    top: 250px;
+    margin: 5px;
+    z-index: 100;
+    height: 57px;
+    width: 57px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    visibility: hidden
+}
+
+.leftArrow {
+    background-repeat: no-repeat;
+    left: 0
+}
+
+.rightArrow {
+    float: right;
+    right: 20px
+}
+
+#playControls {
+    position: absolute;
+    width: 1020px;
+    height: 180px;
+    padding: 0;
+    margin: 0;
+    bottom: 130px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    left: 450px
+}
+
+.video_icon {
+    width: 100px;
+    height: 100px
+}
+
+#pause {
+    position: absolute;
+    left: 120px
+}
+
+#play {
+    position: absolute;
+    left: 120px
+}
+
+#progressBar {
+    left: 0;
+    top: 15px;
+    width: 940px;
+    height: 20px;
+    border: 1px solid #fff;
+    position: relative;
+    border-radius: 20px
+}
+
+#ff {
+    position: absolute;
+    left: 240px;
+    top: 0
+}
+
+#fb {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+#playControls {
+    opacity: 0;
+    -webkit-transition: opacity 1s
+}
+
+#playControls > div {
+    position: relative;
+    top: 20px;
+    left: 340px;
+    width: 350px;
+    height: 85px
+}
+
+progress::-webkit-progress-bar {
+    background: #fff;
+    border-radius: 10px
+}
+
+progress::-webkit-progress-value {
+    background: gray;
+    border-radius: 10px
+}
+
+#video_loading {
+    display: none;
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    z-index: 7;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    background: #fff url(assets/caneo1.gif) no-repeat center 200px;
+    line-height: 450px;
+    padding-top: 200px*/
+}
+
+div#notification {
+    position: absolute;
+    bottom: 0;
+    z-index: 9999999;
+    width: 1920px;
+    height: 590px;
+    background: rgba(0, 0, 0, .8);
+    background-size: contain;
+    display: none
+}
+
+div#notify_title {
+    font-size: 80px;
+    font-weight: 700;
+    width: 1900px;
+    text-align: center;
+    bottom: 135px;
+    position: absolute
+}
+
+#asset_details {
+    position: absolute;
+    top: 315px;
+    left: 50px;
+    height: 200px;
+    width: 450px;
+    background: url(assets/detail_background.png);
+    color: #000;
+    background-size: cover
+}
+
+#asset_title {
+    position: relative;
+    top: 55px;
+    left: 35px;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 35px;
+    max-height: 70px;
+    width: 388px;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+#asset_meta {
+    position: relative;
+    top: 53px;
+    left: 30px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 388px;
+    clear: both;
+    display: inline-block
+}
+
+#asset_summary {
+    position: absolute;
+    top: 310px;
+    left: 515px;
+    height: 170px;
+    width: 760px;
+    background: url(assets/green_background.png);
+    background-size: contain;
+    font-size: 30px;
+    padding: 30px 38px
+}
+
+/*
+#live_video {
+    visibility: hidden;
+}*/
